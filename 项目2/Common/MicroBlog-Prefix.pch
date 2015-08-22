@@ -1,0 +1,19 @@
+//
+//  MicroBlog-Prefix.pch
+//  项目2
+//
+//  Created by ios on 15/8/19.
+//  Copyright (c) 2015年 ios. All rights reserved.
+//
+
+#ifndef __2_MicroBlog_Prefix_pch
+#define __2_MicroBlog_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Common.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#endif
