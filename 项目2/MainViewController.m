@@ -15,7 +15,6 @@
 {
     ThemeImageView *_tabBarForBackGroundImageView;
     ThemeImageView *_selectedImageView;
-    NSInteger _selectedIndex;
 }
 
 //@property(nonatomic,assign)NSUInteger selectedIndex;
@@ -26,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.selectedIndex = 100;
+//    self.selectedIndex = 100;
     [self configureSubViewControllers];
 
     [self configuretabBarBackground];
@@ -36,6 +35,8 @@
 
 - (void)configuretabBarBackground
 {
+    
+    
     _tabBarForBackGroundImageView = [[ThemeImageView alloc] initWithFrame:CGRectMake(0, 0, kwth, 49)];
     
     _tabBarForBackGroundImageView.userInteractionEnabled = YES;
@@ -67,7 +68,7 @@
         
         [button addTarget:self action:@selector(selectedAction:) forControlEvents:UIControlEventTouchUpInside];
         
-        button.tag = i+100;
+        button.tag = i+10;
         
         [_tabBarForBackGroundImageView addSubview:button];
     }
@@ -80,23 +81,24 @@
     
     NSArray *names = @[@"Home",@"Message",@"Profile",@"Discover",@"More"];
     
-    
+    NSMutableArray* VCArray = [NSMutableArray array];
     for(NSString *name in names)
     {
         UIStoryboard *storyBoard= [UIStoryboard storyboardWithName:name bundle:nil];
          BaseNavigationController *nav = [storyBoard instantiateInitialViewController];
-        [self addChildViewController:nav];
+        [VCArray addObject:nav];
     }
 
-    UIViewController *firstVC = self.childViewControllers[0];
+    self.viewControllers = VCArray;
+//    UIViewController *firstVC = self.childViewControllers[0];
 #warning 此处修改不确定
-    [self.tabBar insertSubview:firstVC.view belowSubview:_tabBarForBackGroundImageView];
+//    [self.tabBar insertSubview:firstVC.view belowSubview:_tabBarForBackGroundImageView];
     
 }
 - (void)selectedAction:(UIButton *)button
 {
-    
-    if(_selectedIndex != button.tag)
+//    self.selectedIndex
+    if(self.selectedIndex != (button.tag-10))
     {
         [UIView animateWithDuration:0.2 animations:^{
                 
@@ -104,15 +106,17 @@
             }];
         
         
-        UIViewController *lastVC = self.childViewControllers[_selectedIndex - 100];
+//        self.selectedIndex = button.tag - 10;
+//        
+//        UIViewController *lastVC = self.selectedViewController ;
+//        
+//        [lastVC.view removeFromSuperview];
         
-        [lastVC.view removeFromSuperview];
+//        UIViewController *currentVC = self.viewControllers[button.tag ];
         
-        UIViewController *currentVC = self.childViewControllers[button.tag - 100];
-        
-        [self.view insertSubview:currentVC.view belowSubview:_tabBarForBackGroundImageView];
-        
-        _selectedIndex = button.tag;
+//        [self.view insertSubview:currentVC.view belowSubview:_tabBarForBackGroundImageView];
+        self.selectedIndex = button.tag-10;
+//        _selectedIndex = button.tag;
     }
     
 

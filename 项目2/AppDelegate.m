@@ -14,9 +14,9 @@
 #import "LeftViewController.h"
 #import "RightViewController.h"
 
-#define kAppKey             @"3406872555"
-#define kAppSecret          @"e737f96ab32fc93064627c727cb64d2a"
-#define kAppRedirectURI     @"http://api.weibo.com/oauth2/default.html"
+#define kAppKey             @"4179709950"
+#define kAppSecret          @"3df8ed336522e64eaa66d6ef8c3ca687"
+#define kAppRedirectURI     @"https://api.weibo.com/oauth2/default.html"
 @interface AppDelegate ()
 
 @end
@@ -57,8 +57,8 @@
     
     self.window.rootViewController = drawController;
     
-    [drawController setMaximumLeftDrawerWidth:100.0];
-    [drawController setMaximumRightDrawerWidth:200.0];
+    [drawController setMaximumLeftDrawerWidth:200];
+    [drawController setMaximumRightDrawerWidth:100.0];
     
     [drawController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [drawController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];

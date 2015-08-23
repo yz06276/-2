@@ -7,7 +7,8 @@
 //
 
 #import "BaseViewController.h"
-
+#import "MMDrawerController.h"
+#import "UIViewController+MMDrawerController.h"
 @interface BaseViewController ()
 
 @end
@@ -24,6 +25,32 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)setbaseBarItem{
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Tag" style:UIBarButtonItemStylePlain target:self action:@selector(showLeftMMDrawer)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(showRightMMDrawer)];
+    
+    
+}
+
+- (void)showLeftMMDrawer{
+    
+    MMDrawerController* leftMMDrawer = self.mm_drawerController;
+    [leftMMDrawer openDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
+        
+        
+    }];
+    
+}
+- (void)showRightMMDrawer{
+    
+    MMDrawerController* leftMMDrawer = self.mm_drawerController;
+    [leftMMDrawer openDrawerSide:MMDrawerSideRight animated:YES completion:^(BOOL finished) {
+        
+        
+    }];
+    
 }
 
 /*

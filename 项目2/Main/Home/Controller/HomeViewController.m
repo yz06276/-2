@@ -9,7 +9,8 @@
 #import "HomeViewController.h"
 #import "AppDelegate.h"
 #import "ThemeManager.h"
-@interface HomeViewController ()
+#import "BaseNavigationController.h"
+@interface HomeViewController () <SinaWeiboRequestDelegate>
 
 @end
 
@@ -17,6 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    BaseNavigationController* naviVC = (BaseNavigationController*)self.navigationController;
+    [self setbaseBarItem];
     
     // Do any additional setup after loading the view.
 }
@@ -32,12 +36,50 @@
     return delegate.sinaWeibo;
 }
 - (IBAction)logAction:(id)sender {
-    
-    ThemeManager *themeManager = [ThemeManager sharedThemeManager];
- 
-    themeManager.themeName = @"Blue Moon";
+    NSMutableDictionary* params = [NSMutableDictionary dictionary];
+    SinaWeibo* weibo = [self sinaweibo];
+    weibo.delegate = self;
+    [params setValue:@"2" forKey:@"count"];
+
+    if ([weibo isAuthValid]) {
+        
+        NSLog(@"已经登录");
+      [weibo requestWithURL:@"statuses/home_timeline.json" params:nil httpMethod:@"GET" delegate:self];
+        
+    }else{
+        
+        [weibo logIn];
+        if ([weibo isAuthValid]) {
+         [weibo requestWithURL:@"statuses/home_timeline.json" params:nil httpMethod:@"GET" delegate:self];
+            
+        }
+    }
+//    [params setValue:@"2.00ge6PGG2LtYiDa7bc9398cdcPfoAB" forKey:@"access_token"];
     
 }
+
+
+
+- (void)request:(SinaWeiboRequest *)request didReceiveResponse:(NSURLResponse *)response{
+    
+    
+    NSLog(@"%@",response);
+    
+    
+}
+
+- (void)request:(SinaWeiboRequest *)request didFailWithError:(NSError *)error{
+    
+    NSLog(@"error  %@ \n %li" ,error,error.code);
+}
+
+
+-(void)request:(SinaWeiboRequest *)request didFinishLoadingWithResult:(id)result{
+    
+    
+    NSLog(@"%@",result);
+}
+
 
 
 - (void)sinaweiboDidLogIn:(SinaWeibo *)sinaweibo

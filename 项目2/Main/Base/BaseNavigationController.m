@@ -9,6 +9,8 @@
 #import "BaseNavigationController.h"
 #import "ThemeManager.h"
 #import "ThemeImageView.h"
+#import "MMDrawerController.h"
+#import "UIViewController+MMDrawerController.h"
 #define ChangeThemeNotification @"ChangeTheme"
 
 @interface BaseNavigationController ()
@@ -53,7 +55,7 @@
     UIImage *image = [themeManager getImage:@"mask_titlebar64.png"];
     UIColor *titleColor = [themeManager getThemeColor:@"Mask_Title_color"];
     
-    NSLog(@"%@",titleColor);
+//    NSLog(@"%@",titleColor);
     NSDictionary *attributes = @{
                                  NSForegroundColorAttributeName:
                                      titleColor
@@ -67,11 +69,13 @@
     self.navigationBar.tintColor = [themeManager getThemeColor:@"Mask_Title_color"];
     
     
-#warning 添加navi 的背景
 //    self.navigationController.view
 
     
 }
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -106,7 +106,7 @@
     _dicForColorInfo = [NSDictionary dictionaryWithContentsOfFile:colorPath];
     NSDictionary *rgbDic = [_dicForColorInfo valueForKey:colorName];
     
-    NSLog(@"%@",rgbDic);
+   // NSLog(@"%@",rgbDic);
     
     CGFloat r = [rgbDic[@"R"] floatValue];
     CGFloat g = [rgbDic[@"G"] floatValue];

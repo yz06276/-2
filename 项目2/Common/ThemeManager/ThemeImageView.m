@@ -52,7 +52,7 @@
     ThemeManager *manager = [ThemeManager sharedThemeManager];
     
     UIImage *image = [manager getImage:self.ImgName];
-    
+    NSLog(@"image ddhajsjq= %@",image);
     [self setImage:image];
     
 }
