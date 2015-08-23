@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeTableViewCell.h"
 
-@interface TableViewController : UITableViewController
+@interface HomeTableViewController : UITableViewController
+
+@property(nonatomic,strong)NSArray* modelArray;
+
 
 @end

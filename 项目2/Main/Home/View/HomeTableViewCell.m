@@ -1,14 +1,14 @@
 //
-//  TableViewCell.m
+//  HomeTableViewCell.m
 //  项目2
 //
 //  Created by Mee Leo on 23/8/2015.
 //  Copyright © 2015 ios. All rights reserved.
 //
 
-#import "TableViewCell.h"
+#import "HomeTableViewCell.h"
 
-@implementation TableViewCell
+@implementation HomeTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

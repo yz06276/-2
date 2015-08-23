@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="-164" y="305"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="mdJ-zp-Un5">
             <objects>
                 <viewController id="qeu-eW-Yd1" customClass="HomeViewController" sceneMemberID="viewController">
@@ -33,26 +33,21 @@
                     <view key="view" contentMode="scaleToFill" id="nzA-Qn-bU1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhf-lZ-sGl">
-                                <rect key="frame" x="285" y="285" width="30" height="30"/>
-                                <animations/>
-                                <state key="normal" title="登陆">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logAction:" destination="qeu-eW-Yd1" eventType="touchUpInside" id="Edb-Ke-hqI"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="mhf-lZ-sGl" firstAttribute="centerX" secondItem="nzA-Qn-bU1" secondAttribute="centerX" id="0ay-hx-Pqs"/>
-                            <constraint firstItem="mhf-lZ-sGl" firstAttribute="centerY" secondItem="nzA-Qn-bU1" secondAttribute="centerY" id="YIh-sr-r8g"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="tXW-t7-6bX"/>
+                    <navigationItem key="navigationItem" id="tXW-t7-6bX">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tdd-59-94O">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <state key="normal" title="Home"/>
+                            <connections>
+                                <action selector="logAction:" destination="qeu-eW-Yd1" eventType="touchUpInside" id="YIC-a7-2PC"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FW8-4G-ecF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

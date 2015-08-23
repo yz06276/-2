@@ -10,17 +10,35 @@
 #import "AppDelegate.h"
 #import "ThemeManager.h"
 #import "BaseNavigationController.h"
+#import "HomeTableViewController.h"
+#import "WeiboContentModel.h"
 @interface HomeViewController () <SinaWeiboRequestDelegate>
+
+
+@property(strong,nonatomic) HomeTableViewController* tableViewController;
 
 @end
 
 @implementation HomeViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
 //    BaseNavigationController* naviVC = (BaseNavigationController*)self.navigationController;
-    [self setbaseBarItem];
+  
+    HomeTableViewController* homeTableViewController = [[HomeTableViewController alloc]initWithStyle:UITableViewStylePlain];
+    
+    homeTableViewController.tableView.frame = CGRectMake(0, 64, kwth, kheight-49-64);
+    
+//    UINib* cellNib = [UINib nibWithNibName:@"HomeTableViewCell" bundle:nil];
+//    [homeTableViewController.tableView registerNib:cellNib forCellReuseIdentifier:@"homeCell"];
+    
+    _tableViewController = homeTableViewController;
+    [self.view addSubview:homeTableViewController.tableView];
+//    _tableViewController.automaticallyAdjustsScrollViewInsets = YES;
+//    _tableViewController.tableView.translatesAutoresizingMaskIntoConstraints = YES;
     
     // Do any additional setup after loading the view.
 }
@@ -36,25 +54,28 @@
     return delegate.sinaWeibo;
 }
 - (IBAction)logAction:(id)sender {
+    [self setbaseBarItem];
     NSMutableDictionary* params = [NSMutableDictionary dictionary];
     SinaWeibo* weibo = [self sinaweibo];
     weibo.delegate = self;
-    [params setValue:@"2" forKey:@"count"];
-
+//    [params setValue:@"2" forKey:@"count"];
+        [params setValue:@"2.00ge6PGG2LtYiDa7bc9398cdcPfoAB" forKey:@"access_token"];
     if ([weibo isAuthValid]) {
         
         NSLog(@"已经登录");
-      [weibo requestWithURL:@"statuses/home_timeline.json" params:nil httpMethod:@"GET" delegate:self];
+        [weibo requestWithURL:@"statuses/home_timeline.json" params:nil httpMethod:@"GET" delegate:self];
         
     }else{
         
         [weibo logIn];
         if ([weibo isAuthValid]) {
-         [weibo requestWithURL:@"statuses/home_timeline.json" params:nil httpMethod:@"GET" delegate:self];
+            [weibo requestWithURL:@"statuses/home_timeline.json" params:nil httpMethod:@"GET" delegate:self];
             
         }
     }
-//    [params setValue:@"2.00ge6PGG2LtYiDa7bc9398cdcPfoAB" forKey:@"access_token"];
+    [weibo requestWithURL:@"statuses/home_timeline.json" params:params httpMethod:@"GET" delegate:self];
+
+
     
 }
 
@@ -77,7 +98,26 @@
 -(void)request:(SinaWeiboRequest *)request didFinishLoadingWithResult:(id)result{
     
     
+    NSArray* statuses = [result objectForKey:@"statuses"];
+    
+    NSMutableArray* weiboContentArray = [NSMutableArray array];
+    
+    for (NSDictionary* contentDict  in statuses) {
+        
+        WeiboContentModel* model = [[WeiboContentModel alloc]initWithDataDict:contentDict];
+        
+        [weiboContentArray addObject:model];
+
+    }
+    
+    NSLog(@"%@",weiboContentArray);
+    
+    _tableViewController.modelArray = weiboContentArray;
+    
+    
+    
     NSLog(@"%@",result);
+    
 }
 
 

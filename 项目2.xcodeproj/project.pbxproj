@@ -388,9 +388,11 @@
 		816F5EE81B871BCC00F90B42 /* MainTableViewCellOnMore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 816F5EE61B871BCC00F90B42 /* MainTableViewCellOnMore.xib */; };
 		816F5EEB1B8735BC00F90B42 /* ThemeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 816F5EEA1B8735BC00F90B42 /* ThemeLabel.m */; };
 		816F5EEE1B873A9900F90B42 /* ThemeChangeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 816F5EED1B873A9900F90B42 /* ThemeChangeTableViewController.m */; };
-		B30E2A1D1B89B07C006BA2D8 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B30E2A1C1B89B07C006BA2D8 /* TableViewController.m */; };
-		B30E2A211B89B08F006BA2D8 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B30E2A1F1B89B08F006BA2D8 /* TableViewCell.m */; };
-		B30E2A221B89B08F006BA2D8 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B30E2A201B89B08F006BA2D8 /* TableViewCell.xib */; };
+		B30E2A1D1B89B07C006BA2D8 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B30E2A1C1B89B07C006BA2D8 /* HomeTableViewController.m */; };
+		B30E2A251B89B1E2006BA2D8 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30E2A241B89B1E2006BA2D8 /* BaseModel.m */; };
+		B30E2A281B89B2CF006BA2D8 /* WeiboContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30E2A271B89B2CF006BA2D8 /* WeiboContentModel.m */; };
+		B36FFAB81B8A17830040B89B /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B36FFAB61B8A17830040B89B /* HomeTableViewCell.m */; };
+		B36FFAB91B8A17830040B89B /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36FFAB71B8A17830040B89B /* HomeTableViewCell.xib */; };
 		B396294D1B881DD600A12EDA /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B39629461B881DD600A12EDA /* MMDrawerController.m */; };
 		B396294E1B881DD600A12EDA /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B39629481B881DD600A12EDA /* UIViewController+MMDrawerController.m */; };
 		B396294F1B881DD600A12EDA /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B396294A1B881DD600A12EDA /* MMDrawerBarButtonItem.m */; };
@@ -820,11 +822,15 @@
 		816F5EEA1B8735BC00F90B42 /* ThemeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeLabel.m; sourceTree = "<group>"; };
 		816F5EEC1B873A9900F90B42 /* ThemeChangeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeChangeTableViewController.h; sourceTree = "<group>"; };
 		816F5EED1B873A9900F90B42 /* ThemeChangeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeChangeTableViewController.m; sourceTree = "<group>"; };
-		B30E2A1B1B89B07C006BA2D8 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		B30E2A1C1B89B07C006BA2D8 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		B30E2A1E1B89B08F006BA2D8 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewCell.h; path = "项目2/Main/Home/View/TableViewCell.h"; sourceTree = SOURCE_ROOT; };
-		B30E2A1F1B89B08F006BA2D8 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewCell.m; path = "项目2/Main/Home/View/TableViewCell.m"; sourceTree = SOURCE_ROOT; };
-		B30E2A201B89B08F006BA2D8 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCell.xib; path = "项目2/Main/Home/View/TableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		B30E2A1B1B89B07C006BA2D8 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		B30E2A1C1B89B07C006BA2D8 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		B30E2A231B89B1E2006BA2D8 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		B30E2A241B89B1E2006BA2D8 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		B30E2A261B89B2CF006BA2D8 /* WeiboContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboContentModel.h; sourceTree = "<group>"; };
+		B30E2A271B89B2CF006BA2D8 /* WeiboContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboContentModel.m; sourceTree = "<group>"; };
+		B36FFAB51B8A17830040B89B /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		B36FFAB61B8A17830040B89B /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		B36FFAB71B8A17830040B89B /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		B39629451B881DD600A12EDA /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
 		B39629461B881DD600A12EDA /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
 		B39629471B881DD600A12EDA /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
@@ -958,6 +964,10 @@
 				813680961B84233400A945EB /* BaseViewController.m */,
 				813680981B84235600A945EB /* BaseNavigationController.h */,
 				813680991B84235600A945EB /* BaseNavigationController.m */,
+				B30E2A231B89B1E2006BA2D8 /* BaseModel.h */,
+				B30E2A241B89B1E2006BA2D8 /* BaseModel.m */,
+				B30E2A261B89B2CF006BA2D8 /* WeiboContentModel.h */,
+				B30E2A271B89B2CF006BA2D8 /* WeiboContentModel.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1011,8 +1021,8 @@
 			children = (
 				813680A81B84240D00A945EB /* HomeViewController.h */,
 				813680A91B84240D00A945EB /* HomeViewController.m */,
-				B30E2A1B1B89B07C006BA2D8 /* TableViewController.h */,
-				B30E2A1C1B89B07C006BA2D8 /* TableViewController.m */,
+				B30E2A1B1B89B07C006BA2D8 /* HomeTableViewController.h */,
+				B30E2A1C1B89B07C006BA2D8 /* HomeTableViewController.m */,
 				B39629571B881FD500A12EDA /* LeftViewController.m */,
 				B39629561B881FD500A12EDA /* LeftViewController.h */,
 				B39629591B881FDA00A12EDA /* RightViewController.h */,
@@ -1031,9 +1041,9 @@
 		813680881B8422EA00A945EB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B30E2A1E1B89B08F006BA2D8 /* TableViewCell.h */,
-				B30E2A1F1B89B08F006BA2D8 /* TableViewCell.m */,
-				B30E2A201B89B08F006BA2D8 /* TableViewCell.xib */,
+				B36FFAB51B8A17830040B89B /* HomeTableViewCell.h */,
+				B36FFAB61B8A17830040B89B /* HomeTableViewCell.m */,
+				B36FFAB71B8A17830040B89B /* HomeTableViewCell.xib */,
 				8136809D1B8423A200A945EB /* Home.storyboard */,
 			);
 			path = View;
@@ -1689,7 +1699,6 @@
 				8136831E1B842B7700A945EB /* 089@2x.png in Resources */,
 				813683341B842B7700A945EB /* 097.gif in Resources */,
 				813682121B842B7700A945EB /* compose_savebutton_background.png in Resources */,
-				B30E2A221B89B08F006BA2D8 /* TableViewCell.xib in Resources */,
 				813682A71B842B7700A945EB /* 050.gif in Resources */,
 				813682811B842B7700A945EB /* 037.png in Resources */,
 				813682881B842B7700A945EB /* 039@2x.png in Resources */,
@@ -1741,6 +1750,7 @@
 				8136830A1B842B7700A945EB /* 083.gif in Resources */,
 				8136827D1B842B7700A945EB /* 036.gif in Resources */,
 				8136826A1B842B7700A945EB /* 029@2x.png in Resources */,
+				B36FFAB91B8A17830040B89B /* HomeTableViewCell.xib in Resources */,
 				813683491B842B7700A945EB /* 104.gif in Resources */,
 				8136823B1B842B7700A945EB /* 014.gif in Resources */,
 				813682D61B842B7700A945EB /* 065@2x.png in Resources */,
@@ -2039,18 +2049,19 @@
 			files = (
 				8136805B1B841FCD00A945EB /* __2.xcdatamodeld in Sources */,
 				813680971B84233400A945EB /* BaseViewController.m in Sources */,
+				B36FFAB81B8A17830040B89B /* HomeTableViewCell.m in Sources */,
 				8136836F1B842D0400A945EB /* MainTabBarController.m in Sources */,
+				B30E2A251B89B1E2006BA2D8 /* BaseModel.m in Sources */,
 				813680A71B84240100A945EB /* DiscoverViewController.m in Sources */,
 				813683721B84515900A945EB /* MainViewController.m in Sources */,
 				B396295B1B881FDA00A12EDA /* RightViewController.m in Sources */,
 				8136809A1B84235600A945EB /* BaseNavigationController.m in Sources */,
-				B30E2A1D1B89B07C006BA2D8 /* TableViewController.m in Sources */,
+				B30E2A1D1B89B07C006BA2D8 /* HomeTableViewController.m in Sources */,
 				813680581B841FCD00A945EB /* AppDelegate.m in Sources */,
 				8136805E1B841FCD00A945EB /* ViewController.m in Sources */,
 				813683841B84647800A945EB /* SinaWeiboRequest.m in Sources */,
 				813680AD1B84241900A945EB /* MessageViewController.m in Sources */,
 				B39629581B881FD500A12EDA /* LeftViewController.m in Sources */,
-				B30E2A211B89B08F006BA2D8 /* TableViewCell.m in Sources */,
 				B396294D1B881DD600A12EDA /* MMDrawerController.m in Sources */,
 				B396294F1B881DD600A12EDA /* MMDrawerBarButtonItem.m in Sources */,
 				813680551B841FCD00A945EB /* main.m in Sources */,
@@ -2068,6 +2079,7 @@
 				813680B31B84243000A945EB /* ProfileViewController.m in Sources */,
 				813680AA1B84240D00A945EB /* HomeViewController.m in Sources */,
 				813683801B84647800A945EB /* JSONKit.m in Sources */,
+				B30E2A281B89B2CF006BA2D8 /* WeiboContentModel.m in Sources */,
 				813680B01B84242200A945EB /* MoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

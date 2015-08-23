@@ -6,16 +6,38 @@
 //  Copyright © 2015 ios. All rights reserved.
 //
 
-#import "TableViewController.h"
+#import "HomeTableViewController.h"
+#import "WeiboContentModel.h"
+@interface HomeTableViewController ()
 
-@interface TableViewController ()
 
 @end
 
-@implementation TableViewController
+@implementation HomeTableViewController
 
+-(instancetype)initWithStyle:(UITableViewStyle)style{
+    
+    self = [super initWithStyle:style];
+     UINib* cellNib = [UINib nibWithNibName:@"HomeTableViewCell" bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:@"homeCell"];
+    NSLog(@"123");
+    return self;
+    
+}
+
+-(void)setModelArray:(NSArray *)modelArray{
+    _modelArray = modelArray;
+    [self.tableView reloadData];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
+    
+    
+    
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,13 +54,33 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+        return [_modelArray count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    HomeTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell" forIndexPath:indexPath];
+    
+    static int i ;
+    i++;
+//    cell.textLabel.text = [NSString stringWithFormat:@"%d",i];
+    WeiboContentModel* model = _modelArray[indexPath.row];
+    cell.textView.text = model.text;
+    return cell;
+    
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 300;
+    
 }
 
 /*
