@@ -31,7 +31,8 @@
     HomeTableViewController* homeTableViewController = [[HomeTableViewController alloc]initWithStyle:UITableViewStylePlain];
     
     homeTableViewController.tableView.frame = CGRectMake(0, 64, kwth, kheight-49-64);
-    
+//    homeTableViewController.tableView.estimatedRowHeight = 50.0f;
+//    homeTableViewController.tableView.rowHeight = UITableViewAutomaticDimension;
 //    UINib* cellNib = [UINib nibWithNibName:@"HomeTableViewCell" bundle:nil];
 //    [homeTableViewController.tableView registerNib:cellNib forCellReuseIdentifier:@"homeCell"];
     
@@ -59,7 +60,7 @@
     SinaWeibo* weibo = [self sinaweibo];
     weibo.delegate = self;
 //    [params setValue:@"2" forKey:@"count"];
-        [params setValue:@"2.00ge6PGG2LtYiDa7bc9398cdcPfoAB" forKey:@"access_token"];
+//        [params setValue:@"2.00ge6PGG2LtYiDa7bc9398cdcPfoAB" forKey:@"access_token"];
     if ([weibo isAuthValid]) {
         
         NSLog(@"已经登录");
@@ -116,7 +117,7 @@
     
     
     
-    NSLog(@"%@",result);
+//    NSLog(@"%@",result);
     
 }
 
@@ -126,6 +127,18 @@
 {
     NSLog(@"登陆成功");
     NSLog(@"sinaweiboDidLogIn userID = %@ accesstoken = %@ expirationDate = %@ refresh_token = %@", sinaweibo.userID, sinaweibo.accessToken, sinaweibo.expirationDate,sinaweibo.refreshToken);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary* sinaweiboInfo = @{
+                                    @"AccessTokenKey":sinaweibo.accessToken,
+                                    @"ExpirationDateKey":sinaweibo.expirationDate,
+                                        @"UserIDKey":sinaweibo.userID
+                    
+                                    
+                                    };
+    [defaults setObject:sinaweiboInfo forKey:@"bitchInfoDict"];
+    [defaults synchronize];
+//    NSLog(@"autoData%@",[defaults objectForKey:@"bitchInfoDict"]);
+    
 }
 - (void)sinaweiboDidLogOut:(SinaWeibo *)sinaweibo
 {

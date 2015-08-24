@@ -7,7 +7,7 @@
 //
 
 #import "WeiboContentModel.h"
-
+#import "UserModel.h"
 @implementation WeiboContentModel
 
 
@@ -32,5 +32,20 @@
     
     return mapAtt;
 }
+
+-(void)setAttributes:(NSDictionary *)dataDict{
+    
+    [super setAttributes:dataDict];
+    NSDictionary* userDict = [dataDict objectForKey:@"user"];
+    if (userDict != nil) {
+        UserModel* userModel = [[UserModel alloc]initWithDataDict:userDict];
+        self.userModel = userModel;
+    }
+    NSDictionary* retweetedDict = [dataDict objectForKey:@"retweeted_status"];
+    if (nil != retweetedDict) {
+        self.retweetedWeibo = [[WeiboContentModel alloc]initWithDataDict:retweetedDict];
+    }
+}
+
 
 @end

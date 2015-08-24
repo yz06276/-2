@@ -5,10 +5,13 @@
 //  Created by Mee Leo on 23/8/2015.
 //  Copyright © 2015 ios. All rights reserved.
 //
-
+#import "UIImageView+WebCache.h"
 #import "HomeTableViewController.h"
 #import "WeiboContentModel.h"
+#import "Uitility.h"
+#import "HomeTableViewCell2.h"
 @interface HomeTableViewController ()
+
 
 
 @end
@@ -20,7 +23,11 @@
     self = [super initWithStyle:style];
      UINib* cellNib = [UINib nibWithNibName:@"HomeTableViewCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"homeCell"];
+    
+    UINib* cellNib2 = [UINib nibWithNibName:@"HomeTableViewCell2" bundle:nil];
+    [self.tableView registerNib:cellNib2 forCellReuseIdentifier:@"homeCell2"];
     NSLog(@"123");
+
     return self;
     
 }
@@ -32,8 +39,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-
+    self.tableView.estimatedRowHeight =300.0f;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     
     
@@ -65,27 +72,49 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    HomeTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell" forIndexPath:indexPath];
-    
-    static int i ;
-    i++;
+ 
+
 //    cell.textLabel.text = [NSString stringWithFormat:@"%d",i];
     WeiboContentModel* model = _modelArray[indexPath.row];
-    cell.textView.text = model.text;
-    return cell;
+    
+   
+    if (indexPath.row%2) {
+        HomeTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell" ];
+        cell.time.text = [Uitility DateStringTansformer:model.createDate];
+        cell.textView.text = model.text;
+        cell.userName.text = model.userModel.name;
+        cell.from.text = @"weibo.com";
+        [cell.iconImage sd_setImageWithURL:[NSURL URLWithString:model.userModel.profile_image_url]];
+        [cell.imageView1 removeFromSuperview];
+        [cell.imageView2 removeFromSuperview];
+        
+        return cell;
+     
+        
+    }else{
+        HomeTableViewCell2* cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell2" ];
+        cell.textView.text = model.text;
+        return cell;
+        
+    }
+//    if (!(indexPath.row%2)) {
+//        if () {
+//            <#statements#>
+//        }
+//        
+//    }
+
+    
     
 }
 
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    return 300;
-    
-}
+
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: forIndexPath:indexPath];
     
     // Configure the cell...
     

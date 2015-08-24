@@ -8,6 +8,7 @@
 
 #import "BaseModel.h"
 #import "BaseModel.h"
+#import "UserModel.h"
 @interface WeiboContentModel : BaseModel
 
 @property(nonatomic,copy)NSString       *createDate;       //微博创建时间
@@ -23,6 +24,9 @@
 @property(nonatomic,retain)NSNumber     *commentsCount;      //评论数
 
 
+
+@property(nonatomic,strong)WeiboContentModel* retweetedWeibo;
+@property(nonatomic,strong)UserModel* userModel;
 //-(instancetype)initWithDataDict:(NSDictionary *)dataDict;
 
 @end

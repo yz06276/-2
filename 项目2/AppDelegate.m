@@ -38,7 +38,7 @@
     
     self.sinaWeibo = [[SinaWeibo alloc] initWithAppKey:kAppKey appSecret:kAppSecret appRedirectURI:kAppRedirectURI andDelegate:self.homeViewController];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *sinaweiboInfo = [defaults objectForKey:@"CBSinaWeiboAuthData"];
+    NSDictionary *sinaweiboInfo = [defaults objectForKey:@"bitchInfoDict"];
     if ([sinaweiboInfo objectForKey:@"AccessTokenKey"] && [sinaweiboInfo objectForKey:@"ExpirationDateKey"] && [sinaweiboInfo objectForKey:@"UserIDKey"])
     {
         self.sinaWeibo.accessToken = [sinaweiboInfo objectForKey:@"AccessTokenKey"];
