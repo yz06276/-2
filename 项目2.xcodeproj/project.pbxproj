@@ -391,6 +391,11 @@
 		B30E2A1D1B89B07C006BA2D8 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B30E2A1C1B89B07C006BA2D8 /* HomeTableViewController.m */; };
 		B30E2A251B89B1E2006BA2D8 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30E2A241B89B1E2006BA2D8 /* BaseModel.m */; };
 		B30E2A281B89B2CF006BA2D8 /* WeiboContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30E2A271B89B2CF006BA2D8 /* WeiboContentModel.m */; };
+		B346CCF21B8C542100AAFC0D /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = B346CCF11B8C542100AAFC0D /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B346CCF41B8C545200AAFC0D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B346CCF31B8C545200AAFC0D /* CoreText.framework */; };
+		B346CCF61B8C546500AAFC0D /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B346CCF51B8C546500AAFC0D /* libicucore.tbd */; };
+		B346CCF81B8C54A600AAFC0D /* WXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B346CCF71B8C54A600AAFC0D /* WXLabel.m */; };
+		B346CCFC1B8C568600AAFC0D /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = B346CCFB1B8C568600AAFC0D /* UIViewExt.m */; };
 		B36B8F901B8B2D130011005B /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B36B8F701B8B2D130011005B /* MKAnnotationView+WebCache.m */; };
 		B36B8F911B8B2D130011005B /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = B36B8F721B8B2D130011005B /* NSData+ImageContentType.m */; };
 		B36B8F921B8B2D130011005B /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B36B8F741B8B2D130011005B /* SDImageCache.m */; };
@@ -850,6 +855,14 @@
 		B30E2A241B89B1E2006BA2D8 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		B30E2A261B89B2CF006BA2D8 /* WeiboContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboContentModel.h; sourceTree = "<group>"; };
 		B30E2A271B89B2CF006BA2D8 /* WeiboContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboContentModel.m; sourceTree = "<group>"; };
+		B346CCF01B8C542100AAFC0D /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		B346CCF11B8C542100AAFC0D /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		B346CCF31B8C545200AAFC0D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		B346CCF51B8C546500AAFC0D /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		B346CCF71B8C54A600AAFC0D /* WXLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXLabel.m; path = SDWebImage/WXLabel.m; sourceTree = "<group>"; };
+		B346CCF91B8C54AB00AAFC0D /* WXLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WXLabel.h; path = SDWebImage/WXLabel.h; sourceTree = "<group>"; };
+		B346CCFA1B8C568600AAFC0D /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		B346CCFB1B8C568600AAFC0D /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		B36B8F6F1B8B2D130011005B /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		B36B8F701B8B2D130011005B /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		B36B8F711B8B2D130011005B /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -918,6 +931,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B346CCF61B8C546500AAFC0D /* libicucore.tbd in Frameworks */,
+				B346CCF41B8C545200AAFC0D /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -934,6 +949,7 @@
 		813680461B841FCD00A945EB = {
 			isa = PBXGroup;
 			children = (
+				B346CCF31B8C545200AAFC0D /* CoreText.framework */,
 				813680511B841FCD00A945EB /* 项目2 */,
 				8136806E1B841FCD00A945EB /* 项目2Tests */,
 				813680501B841FCD00A945EB /* Products */,
@@ -1026,7 +1042,13 @@
 		8136807D1B8422EA00A945EB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				B346CCF91B8C54AB00AAFC0D /* WXLabel.h */,
+				B346CCF71B8C54A600AAFC0D /* WXLabel.m */,
+				B346CCFA1B8C568600AAFC0D /* UIViewExt.h */,
+				B346CCFB1B8C568600AAFC0D /* UIViewExt.m */,
 				B36B8F6E1B8B2D120011005B /* SDWebImage */,
+				B346CCF01B8C542100AAFC0D /* RegexKitLite.h */,
+				B346CCF11B8C542100AAFC0D /* RegexKitLite.m */,
 				B36D98E11B8B198600E52EC1 /* Uitility.h */,
 				B36D98E21B8B198600E52EC1 /* Uitility.m */,
 				813680951B84233400A945EB /* BaseViewController.h */,
@@ -1655,6 +1677,7 @@
 		B36B8F6E1B8B2D120011005B /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
+				B346CCF51B8C546500AAFC0D /* libicucore.tbd */,
 				B36B8F6F1B8B2D130011005B /* MKAnnotationView+WebCache.h */,
 				B36B8F701B8B2D130011005B /* MKAnnotationView+WebCache.m */,
 				B36B8F711B8B2D130011005B /* NSData+ImageContentType.h */,
@@ -2186,7 +2209,9 @@
 				B36B8F921B8B2D130011005B /* SDImageCache.m in Sources */,
 				8136805E1B841FCD00A945EB /* ViewController.m in Sources */,
 				B36B8F941B8B2D130011005B /* SDWebImageDecoder.m in Sources */,
+				B346CCFC1B8C568600AAFC0D /* UIViewExt.m in Sources */,
 				B36D98DF1B8B09AE00E52EC1 /* HomeTableViewCell2.m in Sources */,
+				B346CCF81B8C54A600AAFC0D /* WXLabel.m in Sources */,
 				813683841B84647800A945EB /* SinaWeiboRequest.m in Sources */,
 				B36B8F951B8B2D130011005B /* SDWebImageDownloader.m in Sources */,
 				813680AD1B84241900A945EB /* MessageViewController.m in Sources */,
@@ -2208,6 +2233,7 @@
 				816F5EDB1B86BD4200F90B42 /* ThemeManager.m in Sources */,
 				813683831B84647800A945EB /* SinaWeiboAuthorizeView.m in Sources */,
 				B39629551B881E8300A12EDA /* MMExampleDrawerVisualStateManager.m in Sources */,
+				B346CCF21B8C542100AAFC0D /* RegexKitLite.m in Sources */,
 				B36B8F9A1B8B2D130011005B /* UIImage+GIF.m in Sources */,
 				B39629501B881DD600A12EDA /* MMDrawerVisualState.m in Sources */,
 				B36D98E31B8B198600E52EC1 /* Uitility.m in Sources */,

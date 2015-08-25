@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8173.3" systemVersion="15A262e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8173.3" systemVersion="15A262e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,27 +14,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDy-6c-ipU">
+                    <view autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEm-es-Wop" customClass="HomeTableViewCell2">
                         <rect key="frame" x="8" y="8" width="304" height="95.5"/>
                         <animations/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                 </subviews>
                 <animations/>
-                <constraints>
-                    <constraint firstItem="oDy-6c-ipU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="ShO-ab-cQZ"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="oDy-6c-ipU" secondAttribute="bottom" id="efH-jG-R2i"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="oDy-6c-ipU" secondAttribute="trailing" id="ged-XR-SL3"/>
-                    <constraint firstItem="oDy-6c-ipU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="gfE-Lt-5iJ"/>
-                </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="textView" destination="oDy-6c-ipU" id="PDO-9V-Idu"/>
+                <outlet property="cellInCell" destination="UEm-es-Wop" id="mk1-X3-DRS"/>
             </connections>
-            <point key="canvasLocation" x="219" y="261"/>
+            <point key="canvasLocation" x="326" y="207"/>
         </tableViewCell>
     </objects>
 </document>

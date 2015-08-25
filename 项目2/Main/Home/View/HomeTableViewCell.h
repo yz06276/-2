@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WXLabel.h"
 
-@interface HomeTableViewCell : UITableViewCell
+@interface HomeTableViewCell : UITableViewCell <WXLabelDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
-@property (weak, nonatomic) IBOutlet UILabel *textView;
+@property (weak, nonatomic) IBOutlet WXLabel *textView;
 @property (weak, nonatomic) IBOutlet UILabel *userName;
 @property (weak, nonatomic) IBOutlet UILabel *time;
 @property (weak, nonatomic) IBOutlet UILabel *from;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView1;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView2;
 
 @end

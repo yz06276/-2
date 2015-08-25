@@ -31,13 +31,11 @@
     HomeTableViewController* homeTableViewController = [[HomeTableViewController alloc]initWithStyle:UITableViewStylePlain];
     
     homeTableViewController.tableView.frame = CGRectMake(0, 64, kwth, kheight-49-64);
-//    homeTableViewController.tableView.estimatedRowHeight = 50.0f;
-//    homeTableViewController.tableView.rowHeight = UITableViewAutomaticDimension;
-//    UINib* cellNib = [UINib nibWithNibName:@"HomeTableViewCell" bundle:nil];
-//    [homeTableViewController.tableView registerNib:cellNib forCellReuseIdentifier:@"homeCell"];
-    
+
     _tableViewController = homeTableViewController;
     [self.view addSubview:homeTableViewController.tableView];
+    homeTableViewController.tableView.backgroundColor = [UIColor clearColor];
+    homeTableViewController.tableView.backgroundView = nil;
 //    _tableViewController.automaticallyAdjustsScrollViewInsets = YES;
 //    _tableViewController.tableView.translatesAutoresizingMaskIntoConstraints = YES;
     

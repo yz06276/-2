@@ -10,7 +10,7 @@
 #import "WeiboContentModel.h"
 #import "Uitility.h"
 #import "HomeTableViewCell2.h"
-@interface HomeTableViewController ()
+@interface HomeTableViewController ()<UITextViewDelegate>
 
 
 
@@ -26,6 +26,8 @@
     
     UINib* cellNib2 = [UINib nibWithNibName:@"HomeTableViewCell2" bundle:nil];
     [self.tableView registerNib:cellNib2 forCellReuseIdentifier:@"homeCell2"];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
     NSLog(@"123");
 
     return self;
@@ -78,28 +80,66 @@
     WeiboContentModel* model = _modelArray[indexPath.row];
     
    
-    if (indexPath.row%2) {
         HomeTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell" ];
         cell.time.text = [Uitility DateStringTansformer:model.createDate];
         cell.textView.text = model.text;
         cell.userName.text = model.userModel.name;
         cell.from.text = @"weibo.com";
         [cell.iconImage sd_setImageWithURL:[NSURL URLWithString:model.userModel.profile_image_url]];
-        [cell.imageView1 removeFromSuperview];
-        [cell.imageView2 removeFromSuperview];
-        
-        return cell;
-     
-        
-    }else{
-        HomeTableViewCell2* cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell2" ];
-        cell.textView.text = model.text;
-        return cell;
-        
+    if (model.bmiddlelImage.length != 0) {
+        [cell.imageView1 sd_setImageWithURL:[NSURL URLWithString:model.bmiddlelImage]];
+
     }
+    
+    cell.textView.linespace = 8.0f;
+    cell.textView.mutiHeight = 1.0f;
+    
+    
+        
+        return cell;
+    
+//        
+//    }else{
+//    HomeTableViewCell* cellincell = [tableView dequeueReusableCellWithIdentifier:@"homeCell"];
+//        HomeTableViewCell2* cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell2" ];
+//    cell.cellInCell = cellincell;
+//    
+//     cell.cellInCell.time.text = [Uitility DateStringTansformer:model.createDate];
+//            cell.cellInCell.textView.text = model.text;
+//            cell.cellInCell.userName.text = model.userModel.name;
+//            cell.cellInCell.from.text = @"weibo.com";
+//            [cell.cellInCell.iconImage sd_setImageWithURL:[NSURL URLWithString:model.userModel.profile_image_url]];
+//        if (model.bmiddlelImage.length != 0) {
+//            [cell.cellInCell.imageView1 sd_setImageWithURL:[NSURL URLWithString:model.bmiddlelImage]];
+//    
+//        }
+//    return cell;
+//
+//        NSURL* url = [NSURL URLWithString:@"http://www.baidu.com"];
+//            NSString* s1 = @"fuckYourPussyAsshole项目说明： 已经有完工的安卓客户端， 歌词往往都像诗词一样浓缩，搭配着音乐，平淡的文字也有了更多的感情色彩，这是一个用户用歌词来抒发自己情感的平台， 用户可以搭配图片和歌词发布歌词， 制作歌词明信片，有歌词频道，用户可以在创建频道，在频道内发布歌词片段，用户之间可以聊天和添加好友。同时还有个人主页，类似朋友圈一样。 用户可以把自己的歌词片段或其他的歌词片段分享到朋友圈等。";
+//        NSMutableAttributedString* attrString = [[NSMutableAttributedString alloc]initWithString:s1];
+//        [attrString addAttribute:NSLinkAttributeName value:url range:[s1 rangeOfString:@"fuckYourPussyAsshole"]];
+//        
+//        [attrString addAttribute:NSKernAttributeName //字间距
+//                           value:@3
+//                           range:[s1 rangeOfString:@"频道内发布"]];
+//        NSMutableParagraphStyle* style = [[NSMutableParagraphStyle alloc]init];
+//        style.alignment = NSTextAlignmentNatural;//对齐方式
+//        style.firstLineHeadIndent = 60;//首行缩进
+//        style.lineHeightMultiple = 1 ; //行高，倍数
+//        style.lineSpacing = 10; //行间距  常数
+//        
+//        [attrString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, s1.length)];
+////        cell.textView.linkTextAttributes = @{NSForegroundColorAttributeName:[UIColor orangeColor],
+////                                             NSUnderlineStyleAttributeName:@"2"};
+//        cell.textView.editable = NO;
+//        cell.textView.attributedText = attrString;
+//        return cell;
+//        
+//    }
 //    if (!(indexPath.row%2)) {
 //        if () {
-//            <#statements#>
+//            i
 //        }
 //        
 //    }
@@ -107,6 +147,7 @@
     
     
 }
+
 
 
 

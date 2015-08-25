@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeTableViewCell.h"
 
 @interface HomeTableViewCell2 : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *textView;
+
+@property (weak, nonatomic) IBOutlet HomeTableViewCell *cellInCell;
 
 @end

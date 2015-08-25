@@ -15,5 +15,7 @@
 #import "Common.h"
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "UIViewExt.h"
+
 
 #endif

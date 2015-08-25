@@ -48,7 +48,7 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDL-70-pCO">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDL-70-pCO" customClass="WXLabel">
                         <rect key="frame" x="8" y="66" width="445" height="127"/>
                         <animations/>
                         <color key="backgroundColor" red="0.35190284840000002" green="0.63411257249999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,24 +64,14 @@
                             <constraint firstAttribute="width" constant="100" id="Xca-Bz-Ih7"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0dE-tb-Mdw">
-                        <rect key="frame" x="118" y="203" width="100" height="100"/>
-                        <animations/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="0dE-tb-Mdw" secondAttribute="height" multiplier="1:1" id="CNA-TJ-2lK"/>
-                        </constraints>
-                    </imageView>
                 </subviews>
                 <animations/>
                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ZDL-70-pCO" secondAttribute="bottom" constant="10" id="0nk-94-EeF"/>
-                    <constraint firstItem="0dE-tb-Mdw" firstAttribute="bottom" secondItem="fVx-Ll-iWF" secondAttribute="bottom" id="ClI-E2-RD4"/>
-                    <constraint firstItem="0dE-tb-Mdw" firstAttribute="leading" secondItem="fVx-Ll-iWF" secondAttribute="trailing" constant="10" id="Kx0-Rm-6HG"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ZDL-70-pCO" secondAttribute="trailing" id="Z2z-MV-2O2"/>
                     <constraint firstItem="ZDL-70-pCO" firstAttribute="top" secondItem="T6y-Ua-sXg" secondAttribute="bottom" constant="8" id="ZDo-A7-LaG"/>
                     <constraint firstItem="T6y-Ua-sXg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="cTV-cc-L7B"/>
-                    <constraint firstItem="0dE-tb-Mdw" firstAttribute="top" secondItem="fVx-Ll-iWF" secondAttribute="top" id="iVy-M6-e7H"/>
                     <constraint firstItem="T6y-Ua-sXg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="io7-ZD-X1h"/>
                     <constraint firstItem="K6O-ed-bpq" firstAttribute="leading" secondItem="7sK-As-LC9" secondAttribute="trailing" constant="20" id="j1c-DH-xg5"/>
                     <constraint firstItem="fVx-Ll-iWF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="k9O-jM-F3U"/>
@@ -101,12 +91,11 @@
                 <outlet property="from" destination="K6O-ed-bpq" id="doM-ef-Byj"/>
                 <outlet property="iconImage" destination="T6y-Ua-sXg" id="gY5-P0-VIN"/>
                 <outlet property="imageView1" destination="fVx-Ll-iWF" id="OnP-UX-ifE"/>
-                <outlet property="imageView2" destination="0dE-tb-Mdw" id="V6i-iR-3nn"/>
                 <outlet property="textView" destination="ZDL-70-pCO" id="t9e-P7-zHN"/>
                 <outlet property="time" destination="7sK-As-LC9" id="RFM-BL-pVr"/>
                 <outlet property="userName" destination="Gpt-G4-wCp" id="5Eh-dL-cra"/>
             </connections>
-            <point key="canvasLocation" x="670.5" y="565.5"/>
+            <point key="canvasLocation" x="573.5" y="630.5"/>
         </tableViewCell>
     </objects>
 </document>
