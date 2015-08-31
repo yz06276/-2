@@ -12,6 +12,7 @@
 #import "BaseNavigationController.h"
 #import "HomeTableViewController.h"
 #import "WeiboContentModel.h"
+#import "MJRefresh.h"
 @interface HomeViewController () <SinaWeiboRequestDelegate>
 
 
@@ -27,7 +28,8 @@
     [super viewDidLoad];
     
 //    BaseNavigationController* naviVC = (BaseNavigationController*)self.navigationController;
-  
+    [self setbaseBarItem];
+
     HomeTableViewController* homeTableViewController = [[HomeTableViewController alloc]initWithStyle:UITableViewStylePlain];
     
     homeTableViewController.tableView.frame = CGRectMake(0, 64, kwth, kheight-49-64);
@@ -36,10 +38,30 @@
     [self.view addSubview:homeTableViewController.tableView];
     homeTableViewController.tableView.backgroundColor = [UIColor clearColor];
     homeTableViewController.tableView.backgroundView = nil;
+    
+    [self configMJRefersh];
+    
 //    _tableViewController.automaticallyAdjustsScrollViewInsets = YES;
 //    _tableViewController.tableView.translatesAutoresizingMaskIntoConstraints = YES;
     
+//    [self logAction:nil];
+    
     // Do any additional setup after loading the view.
+}
+
+-(void)configMJRefersh{
+    MJRefreshHeader* header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(logAction:)];
+    
+//    [header setTitle:@"Pull down to refresh" forState:MJRefreshStateIdle];
+//    [header setTitle:@"Release to refresh" forState:MJRefreshStatePulling];
+//    [header setTitle:@"Loading ..." forState:MJRefreshStateRefreshing];
+    
+    
+    _tableViewController.tableView.header = header;
+
+    
+    [_tableViewController.tableView.header beginRefreshing];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,8 +75,6 @@
     return delegate.sinaWeibo;
 }
 - (IBAction)logAction:(id)sender {
-    [self setbaseBarItem];
-    NSMutableDictionary* params = [NSMutableDictionary dictionary];
     SinaWeibo* weibo = [self sinaweibo];
     weibo.delegate = self;
 //    [params setValue:@"2" forKey:@"count"];
@@ -72,7 +92,7 @@
             
         }
     }
-    [weibo requestWithURL:@"statuses/home_timeline.json" params:params httpMethod:@"GET" delegate:self];
+
 
 
     
@@ -83,7 +103,7 @@
 - (void)request:(SinaWeiboRequest *)request didReceiveResponse:(NSURLResponse *)response{
     
     
-    NSLog(@"%@",response);
+//    NSLog(@"%@",response);
     
     
 }
@@ -109,10 +129,11 @@
 
     }
     
-    NSLog(@"%@",weiboContentArray);
+//    NSLog(@"%@",weiboContentArray);
     
     _tableViewController.modelArray = weiboContentArray;
     
+    [_tableViewController.tableView.header endRefreshing];
     
     
 //    NSLog(@"%@",result);
@@ -130,7 +151,7 @@
                                     @"AccessTokenKey":sinaweibo.accessToken,
                                     @"ExpirationDateKey":sinaweibo.expirationDate,
                                         @"UserIDKey":sinaweibo.userID
-                    
+
                                     
                                     };
     [defaults setObject:sinaweiboInfo forKey:@"bitchInfoDict"];

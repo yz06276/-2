@@ -63,7 +63,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ThemeManager *themeManager = [ThemeManager sharedThemeManager];
-    MainTableViewCellOnMore *cell = (MainTableViewCellOnMore *)[tableView cellForRowAtIndexPath:indexPath];
+   
     
 //    cell.accessoryType = UITableViewCellAccessoryCheckmark;
     [tableView reloadData];

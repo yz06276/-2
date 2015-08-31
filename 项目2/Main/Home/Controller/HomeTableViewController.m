@@ -9,9 +9,17 @@
 #import "HomeTableViewController.h"
 #import "WeiboContentModel.h"
 #import "Uitility.h"
-#import "HomeTableViewCell2.h"
-@interface HomeTableViewController ()<UITextViewDelegate>
+#import "WXLabel.h"
+#import "MJRefresh.h"
+#import "SinaWeibo.h"
+#import "AppDelegate.h"
+#import "WeiboDetialTableViewController.h"
+#import "HomeViewController.h"
+#import "WeiboCommentModel.h"
 
+@interface HomeTableViewController ()<UITextViewDelegate,SinaWeiboDelegate,SinaWeiboRequestDelegate>
+@property(strong,nonatomic)NSArray* constraintsArray;
+@property (strong,nonatomic)NSIndexPath* seletedIndexPath;
 
 
 @end
@@ -24,12 +32,37 @@
      UINib* cellNib = [UINib nibWithNibName:@"HomeTableViewCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"homeCell"];
     
-    UINib* cellNib2 = [UINib nibWithNibName:@"HomeTableViewCell2" bundle:nil];
-    [self.tableView registerNib:cellNib2 forCellReuseIdentifier:@"homeCell2"];
-    self.tableView.backgroundColor = [UIColor clearColor];
-    
-    NSLog(@"123");
 
+    self.tableView.backgroundColor = [UIColor clearColor];
+//    self.tableView.allowsSelection = NO;
+//    self.tableView.header = [MJRefreshHeader headerWithRefreshingBlock:^{
+//        
+//        NSMutableDictionary* params = [NSMutableDictionary dictionary];
+//        
+//        AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+//        
+//        SinaWeibo* weibo = appDelegate.sinaWeibo;
+//        weibo.delegate = self;
+//        //    [params setValue:@"2" forKey:@"count"];
+//        //        [params setValue:@"2.00ge6PGG2LtYiDa7bc9398cdcPfoAB" forKey:@"access_token"];
+//        if ([weibo isAuthValid]) {
+//            
+//            NSLog(@"已经登录");
+//            [weibo requestWithURL:@"statuses/home_timeline.json" params:nil httpMethod:@"GET" delegate:self];
+//            
+//        }else{
+//            
+//            [weibo logIn];
+//            if ([weibo isAuthValid]) {
+//                [weibo requestWithURL:@"statuses/home_timeline.json" params:nil httpMethod:@"GET" delegate:self];
+//                
+//            }
+//        }
+//        [weibo requestWithURL:@"statuses/home_timeline.json" params:params httpMethod:@"GET" delegate:self];
+//
+//        
+//        
+//    }];
     return self;
     
 }
@@ -55,9 +88,50 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)request:(SinaWeiboRequest *)request didFinishLoadingWithResult:(id)result{
+    
+    
+    
+    
+    HomeTableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"homeCell" forIndexPath:_seletedIndexPath];
+    
+    
+    WeiboDetialTableViewController* detialTableVC = [[WeiboDetialTableViewController alloc]initWithStyle:UITableViewStylePlain];
+    
+    detialTableVC.WeiboCell = [self configCell:cell WithModel:_modelArray[_seletedIndexPath.row]];
+
+    NSArray* dataArray = result[@"comments"];
+    NSMutableArray* fuckArray = [NSMutableArray array];
+    
+    for (NSDictionary* dataDict in dataArray) {
+        
+        WeiboCommentModel* model = [[WeiboCommentModel alloc]init];
+        model.creatDate = [Uitility DateStringTansformer:dataDict[@"created_at"]];
+        model.userModel = [[UserModel alloc]initWithDataDict:dataDict[@"user"]];
+        model.commentContent = dataDict[@"text"];
+        [fuckArray addObject:model];
+        
+    }
+    
+   
+    detialTableVC.weiboCommentModelArray = fuckArray;
+
+
+    HomeViewController* homeVC = (id)self.nextResponder.nextResponder;
+    [homeVC.navigationController pushViewController:detialTableVC animated:YES];
+    
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (SinaWeibo *)sinaweibo
+{
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    return delegate.sinaWeibo;
 }
 
 #pragma mark - Table view data source
@@ -72,6 +146,55 @@
         return [_modelArray count];
 }
 
+-(HomeTableViewCell*)configCell:(HomeTableViewCell* )cell WithModel:(WeiboContentModel*)model{
+    
+    cell.time.text = [Uitility DateStringTansformer:model.createDate];
+    cell.textView.text = model.text;
+    cell.userName.text = model.userModel.name;
+    cell.from.text = @"weibo.com";
+    [cell.iconImage sd_setImageWithURL:[NSURL URLWithString:model.userModel.profile_image_url]];
+    cell.rePostCount.text = [NSString stringWithFormat:@"转发:%li",[model.repostsCount integerValue]];
+    cell.commentCount.text =[NSString stringWithFormat:@"评论:%li",[model.commentsCount integerValue]];
+    if (!model.retweetedWeibo) { //如果微博不包含了转发微博，         cell.textView2Height.active = NO;
+        
+        //        [cell.textView2Height setConstant:0];
+        cell.textView2.hidden = YES;
+        cell.textView2.text = @"";
+        if (model.bmiddlelImage.length != 0) { //如果转发微博里包含了图片 ，
+            [cell.ImageViewHeight setConstant:100.0];
+            
+            [cell.imageView1 sd_setImageWithURL:[NSURL URLWithString:model.bmiddlelImage]];
+            
+        }else {
+            [cell.ImageViewHeight setConstant:0];
+            cell.imageView1.hidden = YES;
+            
+        }
+        
+        
+    }else if(model.retweetedWeibo){ //如果微博包含转发微博，就贴上第二个textView2
+        
+        cell.textView2.hidden = NO;
+        cell.textView2.text =[NSString stringWithFormat:@"@%@:%@", model.retweetedWeibo.userModel.name,model.retweetedWeibo.text];
+        if (model.retweetedWeibo.thumbnailImage.length != 0) {  //微博中是否包含了图片
+            [cell.ImageViewHeight setConstant:100.0];
+            
+            [cell.imageView1 sd_setImageWithURL:[NSURL URLWithString:model.retweetedWeibo.thumbnailImage]];
+        }else{
+            [cell.ImageViewHeight setConstant:0.0];
+            
+        }
+        
+        
+    }
+    
+    
+    [cell.textView  replaceImageText];
+
+    return cell;
+}
+
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
  
@@ -81,22 +204,17 @@
     
    
         HomeTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell" ];
-        cell.time.text = [Uitility DateStringTansformer:model.createDate];
-        cell.textView.text = model.text;
-        cell.userName.text = model.userModel.name;
-        cell.from.text = @"weibo.com";
-        [cell.iconImage sd_setImageWithURL:[NSURL URLWithString:model.userModel.profile_image_url]];
-    if (model.bmiddlelImage.length != 0) {
-        [cell.imageView1 sd_setImageWithURL:[NSURL URLWithString:model.bmiddlelImage]];
+    
 
-    }
-    
-    cell.textView.linespace = 8.0f;
-    cell.textView.mutiHeight = 1.0f;
+//    [cell.textView2Height setShouldBeArchived:NO];
     
     
-        
-        return cell;
+//    cell.textView.linespace = 8.0f;
+//    cell.textView.mutiHeight = 1.0f;
+    
+   return [self configCell:cell WithModel:model];
+    
+    
     
 //        
 //    }else{
@@ -148,6 +266,31 @@
     
 }
 
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+      _seletedIndexPath = indexPath;
+    WeiboContentModel* model = _modelArray[indexPath.row];
+    AppDelegate* delegate = [UIApplication sharedApplication].delegate;
+    SinaWeibo* _Weibo = delegate.sinaWeibo;
+    
+    
+    
+    NSMutableDictionary* params = [NSMutableDictionary dictionary];
+    [params setObject:model.weiboId.stringValue forKey:@"id"];
+    [params setObject:_Weibo.accessToken forKey:@"access_token"];
+    
+    [_Weibo requestWithURL:@"comments/show.json" params:params httpMethod:@"GET" delegate:self];
+    
+  
+    
+    
+//    NSLog(@"%@",[self.nextResponder.nextResponder class]);
+    
+    
+}
 
 
 

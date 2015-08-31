@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A262e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RightViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="gRN-iU-J2O"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDD-ms-cyO">
+                    <rect key="frame" x="58" y="217" width="46" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnA-wm-t7y">
+                    <rect key="frame" x="58" y="179" width="46" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJt-4g-wZ3">
+                    <rect key="frame" x="58" y="130" width="46" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbc-GY-jB1">
+                    <rect key="frame" x="29" y="83" width="46" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="UDD-ms-cyO" firstAttribute="leading" secondItem="mbc-GY-jB1" secondAttribute="leading" id="6kL-vI-gXC"/>
+                <constraint firstItem="TnA-wm-t7y" firstAttribute="trailing" secondItem="mbc-GY-jB1" secondAttribute="trailing" id="9Yx-VK-igN"/>
+                <constraint firstItem="gJt-4g-wZ3" firstAttribute="leading" secondItem="mbc-GY-jB1" secondAttribute="leading" id="PSo-ey-MQc"/>
+                <constraint firstItem="gJt-4g-wZ3" firstAttribute="trailing" secondItem="mbc-GY-jB1" secondAttribute="trailing" id="Sab-lc-vXy"/>
+                <constraint firstItem="UDD-ms-cyO" firstAttribute="trailing" secondItem="mbc-GY-jB1" secondAttribute="trailing" id="dgb-ff-4CB"/>
+                <constraint firstItem="TnA-wm-t7y" firstAttribute="leading" secondItem="mbc-GY-jB1" secondAttribute="leading" id="uZc-or-A31"/>
+            </constraints>
+            <point key="canvasLocation" x="242" y="260"/>
+        </view>
+    </objects>
+</document>

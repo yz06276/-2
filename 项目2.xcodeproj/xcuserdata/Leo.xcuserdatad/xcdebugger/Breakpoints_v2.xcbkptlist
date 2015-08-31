@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x9879;&#x76ee;2/Main/Home/Controller/HomeViewController.m"
-            timestampString = "462198136.00634"
+            timestampString = "462447768.378344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "-logAction:"
             landmarkType = "5">
          </BreakpointContent>
@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x9879;&#x76ee;2/Main/Home/Controller/HomeViewController.m"
-            timestampString = "462198136.00634"
+            timestampString = "462447768.378344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "-request:didFailWithError:"
             landmarkType = "5">
          </BreakpointContent>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x9879;&#x76ee;2/Main/Home/Controller/HomeViewController.m"
-            timestampString = "462198136.00634"
+            timestampString = "462447768.378344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "-request:didFinishLoadingWithResult:"
             landmarkType = "5">
          </BreakpointContent>
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x9879;&#x76ee;2/Main/Home/Controller/HomeViewController.m"
-            timestampString = "462198136.00634"
+            timestampString = "462447768.378344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "-request:didReceiveResponse:"
             landmarkType = "5">
          </BreakpointContent>
@@ -100,11 +100,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x9879;&#x76ee;2/Main/Home/Controller/HomeViewController.m"
-            timestampString = "462198136.00634"
+            timestampString = "462447768.378344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "-request:didFinishLoadingWithResult:"
             landmarkType = "5">
          </BreakpointContent>
@@ -116,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x9879;&#x76ee;2/Main/Home/Controller/HomeViewController.m"
-            timestampString = "462198136.00634"
+            timestampString = "462447768.378344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-request:didFailWithError:"
             landmarkType = "5">
          </BreakpointContent>
@@ -132,11 +132,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x9879;&#x76ee;2/Main/Home/Controller/HomeViewController.m"
-            timestampString = "462198136.00634"
+            timestampString = "462447768.378344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "-request:didFinishLoadingWithResult:"
             landmarkType = "5">
          </BreakpointContent>
@@ -164,11 +164,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x9879;&#x76ee;2/Main/Home/Controller/HomeViewController.m"
-            timestampString = "462198136.00634"
+            timestampString = "462447768.378344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "-request:didFailWithError:"
             landmarkType = "5">
          </BreakpointContent>
@@ -180,12 +180,106 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x9879;&#x76ee;2/Main/Home/Controller/HomeViewController.m"
-            timestampString = "462198136.00634"
+            timestampString = "462447768.378344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "-request:didFinishLoadingWithResult:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "&#x9879;&#x76ee;2/AppDelegate.m"
+            timestampString = "462263352.864466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "5">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "reveal_load_sim">
+                  </ActionContent>
+               </BreakpointActionProxy>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "reveal_start">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x9879;&#x76ee;2/Main/Home/Controller/HomeTableViewController.m"
+            timestampString = "462504253.704441"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x9879;&#x76ee;2/Main/Home/Controller/WeiboDetialTableViewController.m"
+            timestampString = "462504253.704441"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-request:didReceiveResponse:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x9879;&#x76ee;2/Main/Home/Controller/WeiboDetialTableViewController.m"
+            timestampString = "462504253.704441"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x9879;&#x76ee;2/Main/Home/Controller/WeiboDetialTableViewController.m"
+            timestampString = "462504253.704441"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

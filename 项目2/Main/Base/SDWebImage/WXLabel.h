@@ -63,6 +63,7 @@
 @property(nonatomic,assign)float textHeight;
 
 
+- (void)replaceImageText;
 //计算文本内容的高度
 + (float)getTextHeight:(float)fontSize
                  width:(float)width
