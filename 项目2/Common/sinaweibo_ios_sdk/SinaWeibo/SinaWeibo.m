@@ -293,6 +293,13 @@
         ssoLoggingIn = NO;
         
         // open sina weibo app
+        
+        
+        
+        
+        
+    
+        
         UIDevice *device = [UIDevice currentDevice];
         if ([device respondsToSelector:@selector(isMultitaskingSupported)] &&
             [device isMultitaskingSupported])

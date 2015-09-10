@@ -4,8 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendWeiboViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController">
             <connections>
+                <outlet property="mapView" destination="kOK-lm-ArF" id="tH1-pW-Mkc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,20 +15,20 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBb-4K-mhr">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kOK-lm-ArF">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <animations/>
-                    <items>
-                        <navigationItem title="Title" id="Gjz-ID-UFp">
-                            <barButtonItem key="leftBarButtonItem" title="Item" id="iD3-Uo-XCc"/>
-                            <barButtonItem key="rightBarButtonItem" title="Item" id="kaA-eu-qSP"/>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
+                </mapView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="186" y="365"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kOK-lm-ArF" secondAttribute="trailing" id="1fu-bK-Fv1"/>
+                <constraint firstItem="kOK-lm-ArF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DIl-Q4-arc"/>
+                <constraint firstAttribute="bottom" secondItem="kOK-lm-ArF" secondAttribute="bottom" id="WuK-Kh-aJS"/>
+                <constraint firstItem="kOK-lm-ArF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aaF-SV-ydg"/>
+            </constraints>
+            <point key="canvasLocation" x="345" y="261"/>
         </view>
     </objects>
 </document>

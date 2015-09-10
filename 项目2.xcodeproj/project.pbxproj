@@ -392,6 +392,7 @@
 		B30E2A1D1B89B07C006BA2D8 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B30E2A1C1B89B07C006BA2D8 /* HomeTableViewController.m */; };
 		B30E2A251B89B1E2006BA2D8 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30E2A241B89B1E2006BA2D8 /* BaseModel.m */; };
 		B30E2A281B89B2CF006BA2D8 /* WeiboContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30E2A271B89B2CF006BA2D8 /* WeiboContentModel.m */; };
+		B33EB9021B969E3900C648E6 /* WeiboAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B33EB9011B969E3900C648E6 /* WeiboAnnotationView.m */; settings = {ASSET_TAGS = (); }; };
 		B346CCF21B8C542100AAFC0D /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = B346CCF11B8C542100AAFC0D /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B346CCF41B8C545200AAFC0D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B346CCF31B8C545200AAFC0D /* CoreText.framework */; };
 		B346CCF61B8C546500AAFC0D /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B346CCF51B8C546500AAFC0D /* libicucore.tbd */; };
@@ -440,6 +441,8 @@
 		B36EB3951B943B7C008BE247 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B36EB3941B943B7C008BE247 /* Podfile */; settings = {ASSET_TAGS = (); }; };
 		B36FFAB81B8A17830040B89B /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B36FFAB61B8A17830040B89B /* HomeTableViewCell.m */; };
 		B36FFAB91B8A17830040B89B /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36FFAB71B8A17830040B89B /* HomeTableViewCell.xib */; };
+		B378EA2F1B968D7800167D1F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B378EA2D1B968D7800167D1F /* MapViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B378EA301B968D7800167D1F /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B378EA2E1B968D7800167D1F /* MapViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		B38E7EE01B93E9C7003F2F41 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B38E7EDF1B93E9C7003F2F41 /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		B38E7EE51B93F376003F2F41 /* SendWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38E7EE31B93F376003F2F41 /* SendWeiboViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B38E7EE61B93F376003F2F41 /* SendWeiboViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B38E7EE41B93F376003F2F41 /* SendWeiboViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -450,10 +453,12 @@
 		B39629551B881E8300A12EDA /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B39629541B881E8300A12EDA /* MMExampleDrawerVisualStateManager.m */; };
 		B39629581B881FD500A12EDA /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B39629571B881FD500A12EDA /* LeftViewController.m */; };
 		B396295B1B881FDA00A12EDA /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B396295A1B881FDA00A12EDA /* RightViewController.m */; };
+		B3DC783A1B9542E600DF52CD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DC78391B9542E600DF52CD /* CoreLocation.framework */; };
 		B3DE42361B90364200BE51E2 /* WeiboCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DE42351B90364200BE51E2 /* WeiboCommentModel.m */; settings = {ASSET_TAGS = (); }; };
 		B3DE42391B9039D800BE51E2 /* WeiboDetialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DE42381B9039D800BE51E2 /* WeiboDetialTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B3DE423D1B90479500BE51E2 /* WeiboCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DE423B1B90479500BE51E2 /* WeiboCommentTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		B3DE423E1B90479500BE51E2 /* WeiboCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DE423C1B90479500BE51E2 /* WeiboCommentTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		B3FB6A531B947C2C00751BD2 /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FB6A521B947C2C00751BD2 /* DataService.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -883,6 +888,8 @@
 		B30E2A241B89B1E2006BA2D8 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		B30E2A261B89B2CF006BA2D8 /* WeiboContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboContentModel.h; sourceTree = "<group>"; };
 		B30E2A271B89B2CF006BA2D8 /* WeiboContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboContentModel.m; sourceTree = "<group>"; };
+		B33EB9001B969E3900C648E6 /* WeiboAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeiboAnnotationView.h; path = ../Controller/WeiboAnnotationView.h; sourceTree = "<group>"; };
+		B33EB9011B969E3900C648E6 /* WeiboAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeiboAnnotationView.m; path = ../Controller/WeiboAnnotationView.m; sourceTree = "<group>"; };
 		B346CCF01B8C542100AAFC0D /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		B346CCF11B8C542100AAFC0D /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		B346CCF31B8C545200AAFC0D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -974,6 +981,9 @@
 		B36FFAB51B8A17830040B89B /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
 		B36FFAB61B8A17830040B89B /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		B36FFAB71B8A17830040B89B /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		B378EA2C1B968D7800167D1F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		B378EA2D1B968D7800167D1F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		B378EA2E1B968D7800167D1F /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		B38E7EDE1B93E9C7003F2F41 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		B38E7EDF1B93E9C7003F2F41 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		B38E7EE21B93F376003F2F41 /* SendWeiboViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendWeiboViewController.h; sourceTree = "<group>"; };
@@ -993,6 +1003,7 @@
 		B39629571B881FD500A12EDA /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		B39629591B881FDA00A12EDA /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		B396295A1B881FDA00A12EDA /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		B3DC78391B9542E600DF52CD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B3DE42341B90364200BE51E2 /* WeiboCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboCommentModel.h; sourceTree = "<group>"; };
 		B3DE42351B90364200BE51E2 /* WeiboCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboCommentModel.m; sourceTree = "<group>"; };
 		B3DE42371B9039D800BE51E2 /* WeiboDetialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboDetialTableViewController.h; sourceTree = "<group>"; };
@@ -1000,6 +1011,8 @@
 		B3DE423A1B90479500BE51E2 /* WeiboCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboCommentTableViewCell.h; sourceTree = "<group>"; };
 		B3DE423B1B90479500BE51E2 /* WeiboCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboCommentTableViewCell.m; sourceTree = "<group>"; };
 		B3DE423C1B90479500BE51E2 /* WeiboCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeiboCommentTableViewCell.xib; sourceTree = "<group>"; };
+		B3FB6A511B947C2C00751BD2 /* DataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
+		B3FB6A521B947C2C00751BD2 /* DataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
 		B439F3DDEF75B24CACD26F5D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EA8361E3AA0FE216912EC0D3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1009,6 +1022,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DC783A1B9542E600DF52CD /* CoreLocation.framework in Frameworks */,
 				B346CCF61B8C546500AAFC0D /* libicucore.tbd in Frameworks */,
 				B346CCF41B8C545200AAFC0D /* CoreText.framework in Frameworks */,
 				600591570E5E2E3DCE6F6C1B /* libPods.a in Frameworks */,
@@ -1028,6 +1042,7 @@
 		26CE7C7089F49925D831206B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3DC78391B9542E600DF52CD /* CoreLocation.framework */,
 				B2C020539818C9E43E4BB983 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -1219,6 +1234,9 @@
 				B396295A1B881FDA00A12EDA /* RightViewController.m */,
 				B363B8E91B8E0A0700E9BC88 /* RightViewController.xib */,
 				B3DE42371B9039D800BE51E2 /* WeiboDetialTableViewController.h */,
+				B378EA2C1B968D7800167D1F /* MapViewController.h */,
+				B378EA2D1B968D7800167D1F /* MapViewController.m */,
+				B378EA2E1B968D7800167D1F /* MapViewController.xib */,
 				B3DE42381B9039D800BE51E2 /* WeiboDetialTableViewController.m */,
 			);
 			path = Controller;
@@ -1227,6 +1245,8 @@
 		813680871B8422EA00A945EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B33EB9001B969E3900C648E6 /* WeiboAnnotationView.h */,
+				B33EB9011B969E3900C648E6 /* WeiboAnnotationView.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1907,6 +1927,8 @@
 		B38E7EDD1B93E96E003F2F41 /* WXLabel */ = {
 			isa = PBXGroup;
 			children = (
+				B3FB6A511B947C2C00751BD2 /* DataService.h */,
+				B3FB6A521B947C2C00751BD2 /* DataService.m */,
 				B346CCF91B8C54AB00AAFC0D /* WXLabel.h */,
 				B346CCF71B8C54A600AAFC0D /* WXLabel.m */,
 				B346CCF01B8C542100AAFC0D /* RegexKitLite.h */,
@@ -2337,6 +2359,7 @@
 				813682E11B842B7700A945EB /* 069.png in Resources */,
 				8136835C1B842B7700A945EB /* login_ok@2x.png in Resources */,
 				8136830C1B842B7700A945EB /* 083@2x.png in Resources */,
+				B378EA301B968D7800167D1F /* MapViewController.xib in Resources */,
 				813682F81B842B7700A945EB /* 077.gif in Resources */,
 				813682481B842B7700A945EB /* 018.png in Resources */,
 				813682DC1B842B7700A945EB /* 067@2x.png in Resources */,
@@ -2456,6 +2479,7 @@
 				B3DE42391B9039D800BE51E2 /* WeiboDetialTableViewController.m in Sources */,
 				B36FFAB81B8A17830040B89B /* HomeTableViewCell.m in Sources */,
 				B36B8F9D1B8B2D130011005B /* UIImageView+HighlightedWebCache.m in Sources */,
+				B33EB9021B969E3900C648E6 /* WeiboAnnotationView.m in Sources */,
 				8136836F1B842D0400A945EB /* MainTabBarController.m in Sources */,
 				B36B8F911B8B2D130011005B /* NSData+ImageContentType.m in Sources */,
 				B30E2A251B89B1E2006BA2D8 /* BaseModel.m in Sources */,
@@ -2469,6 +2493,7 @@
 				B363B92A1B8E0F6300E9BC88 /* UIView+MJExtension.m in Sources */,
 				B30E2A1D1B89B07C006BA2D8 /* HomeTableViewController.m in Sources */,
 				B36B8F931B8B2D130011005B /* SDWebImageCompat.m in Sources */,
+				B378EA2F1B968D7800167D1F /* MapViewController.m in Sources */,
 				B363B9291B8E0F6300E9BC88 /* UIScrollView+MJRefresh.m in Sources */,
 				B36B8F971B8B2D130011005B /* SDWebImageManager.m in Sources */,
 				813680581B841FCD00A945EB /* AppDelegate.m in Sources */,
@@ -2499,6 +2524,7 @@
 				B396294E1B881DD600A12EDA /* UIViewController+MMDrawerController.m in Sources */,
 				816F5EE01B86CBC000F90B42 /* ThemeButton.m in Sources */,
 				816F5EEE1B873A9900F90B42 /* ThemeChangeTableViewController.m in Sources */,
+				B3FB6A531B947C2C00751BD2 /* DataService.m in Sources */,
 				816F5EE31B86FD9C00F90B42 /* ThemeImageView.m in Sources */,
 				B363B91C1B8E0F6300E9BC88 /* MJRefreshHeader.m in Sources */,
 				816F5EEB1B8735BC00F90B42 /* ThemeLabel.m in Sources */,

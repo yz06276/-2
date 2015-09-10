@@ -9,6 +9,8 @@
 #import "BaseViewController.h"
 #import "MMDrawerController.h"
 #import "UIViewController+MMDrawerController.h"
+#import <AFNetworking.h>
+#import <UIProgressView+AFNetworking.h>
 @interface BaseViewController ()
 
 @end
@@ -51,6 +53,66 @@
         
     }];
     
+}
+- (void)showStatusTip:(NSString *)title
+                 show:(BOOL)show
+            operation:(AFHTTPRequestOperation *)operation{
+    
+    
+    if (_tipWindow == nil) {
+        //创建window
+        _tipWindow = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, kwth, 20)];
+        _tipWindow.windowLevel = UIWindowLevelStatusBar;
+        _tipWindow.backgroundColor = [UIColor blackColor];
+        
+        //创建Label
+        UILabel *tpLabel = [[UILabel alloc] initWithFrame:_tipWindow.bounds];
+        tpLabel.backgroundColor = [UIColor clearColor];
+        tpLabel.textAlignment = NSTextAlignmentCenter;
+        tpLabel.font = [UIFont systemFontOfSize:13.0f];
+        tpLabel.textColor = [UIColor whiteColor];
+        tpLabel.tag = 100;
+        [_tipWindow addSubview:tpLabel];
+        
+        
+        //进度条
+        UIProgressView *progress = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+        progress.frame = CGRectMake(0, 20-3, kwth, 5);
+        progress.tag = 101;
+        progress.progress = 0.0;
+        [_tipWindow addSubview:progress];
+        
+        
+    }
+    
+    UILabel *tpLabel = (UILabel *)[_tipWindow viewWithTag:100];
+    tpLabel.text = title;
+    
+    
+    UIProgressView *progressView = (UIProgressView *)[_tipWindow viewWithTag:101];
+    
+    if (show) {
+        _tipWindow.hidden = NO;
+        if (operation != nil) {
+            progressView.hidden = NO;
+            //AF 对 UIProgressView的扩展
+            [progressView setProgressWithUploadProgressOfOperation:operation animated:YES];
+        }else{
+            progressView.hidden = YES;
+        }
+        
+        
+    }else{
+        
+        [self performSelector:@selector(removeTipWindow) withObject:nil afterDelay:1];
+    }
+}
+
+
+- (void)removeTipWindow{
+    
+    _tipWindow.hidden = YES;
+    _tipWindow = nil;
 }
 
 /*

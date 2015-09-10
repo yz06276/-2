@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A262e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RightViewController">
             <connections>
+                <outlet property="button1" destination="mbc-GY-jB1" id="7UR-Hw-1ki"/>
+                <outlet property="button2" destination="gJt-4g-wZ3" id="mkE-ex-J2P"/>
+                <outlet property="button3" destination="TnA-wm-t7y" id="sTD-Ij-UHC"/>
+                <outlet property="button4" destination="UDD-ms-cyO" id="zU5-Uy-ZwT"/>
+                <outlet property="button5" destination="Kjw-n5-gy7" id="ljA-8L-vAU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gRN-iU-J2O"/>
             </connections>
         </placeholder>
@@ -14,38 +19,48 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDD-ms-cyO">
-                    <rect key="frame" x="58" y="217" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbc-GY-jB1" customClass="ThemeButton">
+                    <rect key="frame" x="30" y="70" width="45" height="30"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="cKZ-uA-yV8"/>
+                    </constraints>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnA-wm-t7y">
-                    <rect key="frame" x="58" y="179" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDD-ms-cyO" customClass="ThemeButton">
+                    <rect key="frame" x="30" y="190" width="45" height="30"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJt-4g-wZ3">
-                    <rect key="frame" x="58" y="130" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnA-wm-t7y" customClass="ThemeButton">
+                    <rect key="frame" x="30" y="150" width="45" height="30"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbc-GY-jB1">
-                    <rect key="frame" x="29" y="83" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJt-4g-wZ3" customClass="ThemeButton">
+                    <rect key="frame" x="30" y="110" width="45" height="30"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjw-n5-gy7" customClass="ThemeButton">
+                    <rect key="frame" x="30" y="230" width="45" height="30"/>
+                    <animations/>
                 </button>
             </subviews>
             <animations/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="UDD-ms-cyO" firstAttribute="top" secondItem="TnA-wm-t7y" secondAttribute="bottom" constant="10" id="2Xg-Rb-hWL"/>
                 <constraint firstItem="UDD-ms-cyO" firstAttribute="leading" secondItem="mbc-GY-jB1" secondAttribute="leading" id="6kL-vI-gXC"/>
                 <constraint firstItem="TnA-wm-t7y" firstAttribute="trailing" secondItem="mbc-GY-jB1" secondAttribute="trailing" id="9Yx-VK-igN"/>
+                <constraint firstItem="mbc-GY-jB1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="KLa-vp-2KZ"/>
                 <constraint firstItem="gJt-4g-wZ3" firstAttribute="leading" secondItem="mbc-GY-jB1" secondAttribute="leading" id="PSo-ey-MQc"/>
+                <constraint firstItem="TnA-wm-t7y" firstAttribute="top" secondItem="gJt-4g-wZ3" secondAttribute="bottom" constant="10" id="SNd-Iu-jwV"/>
                 <constraint firstItem="gJt-4g-wZ3" firstAttribute="trailing" secondItem="mbc-GY-jB1" secondAttribute="trailing" id="Sab-lc-vXy"/>
+                <constraint firstItem="Kjw-n5-gy7" firstAttribute="trailing" secondItem="UDD-ms-cyO" secondAttribute="trailing" id="VEk-Kj-r9Y"/>
+                <constraint firstItem="gJt-4g-wZ3" firstAttribute="top" secondItem="mbc-GY-jB1" secondAttribute="bottom" constant="10" id="Y5O-E6-eOQ"/>
+                <constraint firstItem="mbc-GY-jB1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="ZMx-Jc-Rw5"/>
                 <constraint firstItem="UDD-ms-cyO" firstAttribute="trailing" secondItem="mbc-GY-jB1" secondAttribute="trailing" id="dgb-ff-4CB"/>
+                <constraint firstItem="Kjw-n5-gy7" firstAttribute="top" secondItem="UDD-ms-cyO" secondAttribute="bottom" constant="10" id="fvY-Hq-8P3"/>
                 <constraint firstItem="TnA-wm-t7y" firstAttribute="leading" secondItem="mbc-GY-jB1" secondAttribute="leading" id="uZc-or-A31"/>
+                <constraint firstItem="Kjw-n5-gy7" firstAttribute="leading" secondItem="UDD-ms-cyO" secondAttribute="leading" id="wcd-OJ-uez"/>
             </constraints>
-            <point key="canvasLocation" x="242" y="260"/>
+            <point key="canvasLocation" x="308" y="259"/>
         </view>
     </objects>
 </document>

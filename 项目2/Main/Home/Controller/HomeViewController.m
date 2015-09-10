@@ -30,7 +30,7 @@
 //    BaseNavigationController* naviVC = (BaseNavigationController*)self.navigationController;
     [self setbaseBarItem];
 
-    HomeTableViewController* homeTableViewController = [[HomeTableViewController alloc]initWithStyle:UITableViewStylePlain];
+    HomeTableViewController* homeTableViewController = [[HomeTableViewController alloc]initWithStyle:UITableViewStylePlain];    
     
     homeTableViewController.tableView.frame = CGRectMake(0, 64, kwth, kheight-49-64);
 

@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SendWeiboViewController : UIViewController
+#import "ZoombleImageView.h"
+#import "BaseViewController.h"
+#import <CoreLocation/CoreLocation.h>
+@interface SendWeiboViewController : BaseViewController <UIActionSheetDelegate,UIImagePickerControllerDelegate,CLLocationManagerDelegate>
 
 {
+    ZoombleImageView *_zoomImageView;
+    UIView* _editorBar;
+    UITextView* _textView;
 
     
 }

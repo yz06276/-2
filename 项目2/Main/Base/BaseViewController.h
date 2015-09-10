@@ -7,8 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AFNetworking.h>
 @interface BaseViewController : UIViewController
+
+{
+    UIWindow *_tipWindow;
+}
 - (void)setbaseBarItem;
+
+//1 显示加载提示-自己实现
+- (void)showLoading:(BOOL)show;
+//3 状态栏提示
+- (void)showStatusTip:(NSString *)title
+                 show:(BOOL)show
+            operation:(AFHTTPRequestOperation *)operation;
+
 
 @end
